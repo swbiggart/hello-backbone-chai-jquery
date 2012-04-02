@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="lib/mocha.css" />
+    <script src="../js/vendor/jquery.min.js"></script>
+    <script src="../js/vendor/json2.js"></script>
+    <script src="../js/vendor/underscore-min.js"></script>
+    <script src="../js/vendor/backbone-min.js"></script>
+    
+    <script src="../js/app.js"></script>
+    
+    <script src="lib/sinon.js"></script>
+    <script src="lib/mocha.js"></script>
+    <script src="lib/chai.js"></script>
+    <script src="lib/sinon-chai.js"></script>
+    <script src="lib/chai-jquery.js"></script>
+    
+    <script>mocha.setup('bdd')</script>
+    <script>
+      //setup assertion functions
+      window.assert = chai.assert;
+      window.should = chai.should();
+      window.expect = chai.expect;
+
+      window.chai.use(window.sinonChai);
+      window.chai.use(window.chai_jquery);
+    </script>
+    
+    <script src="jquery.js"></script>
+    
+    <script>
+      onload = function(){
+        var runner = mocha.run();
+        runner.globals(['App']);
+
+        // runner.on('test end', function(test){
+        //   console.log(test.fullTitle());
+        // });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+  </body>
+</html>

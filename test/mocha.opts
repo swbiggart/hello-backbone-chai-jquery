@@ -1,0 +1,4 @@
+--require test/include
+--globals App
+--reporter spec
+--ui bdd

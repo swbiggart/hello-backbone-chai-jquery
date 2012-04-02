@@ -1,0 +1,17 @@
+{
+  "author": "Your Name",
+  "name": "package-name",
+  "description": "Package description",
+  "version": "0.0.1",
+  "homepage": "",
+  "dependencies": {
+    "mocha": "latest",
+    "jquery": "latest",
+    "underscore": "latest",
+    "backbone": "latest",
+    "chai": "latest",
+    "jsdom": "latest",
+    "sinon": "latest",
+    "sinon-chai": "latest"
+  }
+}
